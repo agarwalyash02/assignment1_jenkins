@@ -13,5 +13,11 @@ pipeline{
                 sh "cp index.html /var/www/html/"
             }
         }
+        stage("dummy_python")
+        {
+            steps{
+                sh "python3 dummy.py"
+            }
+        }
     }
 }
